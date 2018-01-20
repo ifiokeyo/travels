@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Blue Travels</title>
+    <meta name="viewport" content="width=device-width initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet"  href="css/main.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="js/collapse.js"></script>
+    <script type="text/javascript" src="js/display.js"></script>
+    <script type="text/javascript" src="js/changeBg.js"></script>
+  </head>
+
+  <body>
+    <main>
+      <nav class="navbar">
+        <div class="navbar-wrapper">
+          <a class="navbar-brand" href="index.html">
+              <img src="images/logo.png" />
+              Blue Travels
+          </a>
+
+          <div class="navbar-navcontainer">
+            <ul class="navbar-nav">
+                <li class="">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link selected" href="travel.html">Travel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="traveltips.html">Travel Tips</a>
+                </li>
+            </ul>
+            <form class="navbar-select">
+                <label class="text-white">Background Color</label>&nbsp;
+                <select id="backcolor-select" onchange="changeBgColor();">
+                    <option value="#fff">Default</option>
+                    <option value="#f7dbc8">Color 1</option>
+                    <option value="#d3e8c0">Color 2</option>
+                    <option value="#cbf2ef">Color 3</option>
+                    <option value="#eedcef">Color 4</option>
+                </select>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+          <div class="row no-margin-bottom"> <!-- login form section -->
+              <div class="col">
+                  <button class="btn-default no-bg" onclick="toggleBtn();">
+                      Toggle Login Form
+                  </button>
+                  <div id="login-form" class="collapse">
+                      <form class="form-inline">
+                          <div class="form-group">
+                              <input type="email" class="form-control" id="email" placeholder="E-mail address" required="required">
+                          </div>
+                          <div class="form-group">
+                              <input type="password" class="form-control" id="password" placeholder="Password" required="required">
+                          </div>
+                          <button type="submit" class="btn btn-primary">Login</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <h1 class="page-title">Travel</h1>
+              <h4 class="destination">Destinations</h4>
+              <div class="col-2-of-3">
+                  <div class="row">
+                      <div class="destinations">
+                          <div id="accordion" role="tablist">
+                              <div class="card">
+                                  <div class="card-header" role="tab" id="headingOne">
+                                      <h5 class="mb-0">
+                                          <a role="button" onclick="showContent('card-content-1');">
+                                              Paris
+                                          </a>
+                                      </h5>
+                                  </div>
+                                  <div class="card-body-hidden">
+                                      <div class="card-body" id="card-content-1">
+                                          <p class="font-weight-bold">Price: $3000</p>
+                                          Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="card">
+                                  <div class="card-header" role="tab" id="headingTwo">
+                                      <h5 class="mb-0">
+                                          <a class="collapsed" role="button" onclick="showContent('card-content-2');">
+                                              Moscow
+                                          </a>
+                                      </h5>
+                                  </div>
+                                  <div class="card-body-hidden">
+                                      <div class="card-body" id="card-content-2">
+                                          <p class="font-weight-bold">Price: $1000</p>
+                                          Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="card">
+                                  <div class="card-header" role="tab" id="headingThree">
+                                      <h5 class="mb-0">
+                                          <a class="collapsed" role="button" onclick="showContent('card-content-3');">
+                                              Shanghai
+                                          </a>
+                                      </h5>
+                                  </div>
+                                  <div class="card-body-hidden">
+                                      <div class="card-body" id="card-content-3">
+                                          <p class="font-weight-bold">Price: $2000</p>
+                                          Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-1-of-3">
+                  <aside>
+                      <h4>Traveling in promotion</h4>
+                      <p>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                  </aside>
+              </div>
+          </div>
+      </div>
+      <!--footer-->
+  </div>
+
+    </main>
+  </body>
+</html>

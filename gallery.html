@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Blue Travels</title>
+    <meta name="viewport" content="width=device-width initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet"  href="css/main.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="js/collapse.js"></script>
+    <script type="text/javascript" src="js/showTip.js"></script>
+    <script type="text/javascript" src="js/changeBg.js"></script>
+  </head>
+
+  <body>
+    <main>
+      <nav class="navbar">
+        <div class="navbar-wrapper">
+          <a class="navbar-brand" href="index.html">
+              <img src="images/logo.png" />
+              Blue Travels
+          </a>
+
+          <div class="navbar-navcontainer">
+            <ul class="navbar-nav">
+                <li class="">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="travel.html">Travel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link selected" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="traveltips.html">Travel Tips</a>
+                </li>
+            </ul>
+            <form class="navbar-select">
+                <label class="text-white">Background Color</label>&nbsp;
+                <select id="backcolor-select" onchange="changeBgColor();">
+                    <option value="#fff">Default</option>
+                    <option value="#f7dbc8">Color 1</option>
+                    <option value="#d3e8c0">Color 2</option>
+                    <option value="#cbf2ef">Color 3</option>
+                    <option value="#eedcef">Color 4</option>
+                </select>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+          <div class="row no-margin-bottom"> <!-- login form section -->
+              <div class="col">
+                  <button class="btn-default no-bg" onclick="toggleBtn();">
+                      Toggle Login Form
+                  </button>
+                  <div id="login-form" class="collapse">
+                      <form class="form-inline">
+                          <div class="form-group">
+                              <input type="email" class="form-control" id="email" placeholder="E-mail address" required="required">
+                          </div>
+                          <div class="form-group">
+                              <input type="password" class="form-control" id="password" placeholder="Password" required="required">
+                          </div>
+                          <button type="submit" class="btn btn-primary">Login</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <h1 class="page-title">Gallery</h1>
+              <div class="col-2-of-3">
+                  <div class="gallery">
+                      <!-- fancybox gallery -->
+                      <div class="gallery-item">
+                              <img src="images/g1.jpg" onclick="openModal();currentSlide(1)" class="gal-img hover-shadow cursor">
+                      </div>
+                      <div class="gallery-item">
+                              <img src="images/g2.jpg" onclick="openModal();currentSlide(2)" class="gal-img hover-shadow cursor">
+                      </div>
+                      <div class="gallery-item">
+                              <img src="images/g3.jpg" onclick="openModal();currentSlide(3)" class="gal-img hover-shadow cursor">
+                      </div>
+                      <div class="gallery-item">
+                              <img src="images/g2.jpg" onclick="openModal();currentSlide(4)" class="gal-img hover-shadow cursor">
+                      </div>
+                      <div class="gallery-item">
+                              <img src="images/g1.jpg" onclick="openModal();currentSlide(5)" class="gal-img hover-shadow cursor">
+                      </div>
+                      <div class="gallery-item">
+                              <img src="images/g2.jpg" onclick="openModal();currentSlide(6)" class="gal-img hover-shadow cursor">
+                      </div>
+                      <div class="gallery-item">
+                              <img src="images/g3.jpg" onclick="openModal();currentSlide(7)" class="gal-img hover-shadow cursor">
+                      </div>
+                  </div>
+              </div>
+              <div class="col-1-of-3">
+                  <aside>
+                      <h4>Traveling in promotion</h4>
+                      <p>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                  </aside>
+              </div>
+          </div>
+
+          <div id="myModal" class="modal">
+              <span class="close cursor" onclick="closeModal()">&times;</span>
+              <div class="modal-content">
+
+                <div class="mySlides">
+                  <div class="numbertext">1 / 7</div>
+                  <img src="images/g1.jpg">
+                </div>
+
+                <div class="mySlides">
+                  <div class="numbertext">2 / 7</div>
+                  <img src="images/g2.jpg">
+                </div>
+
+                <div class="mySlides">
+                  <div class="numbertext">3 / 7</div>
+                  <img src="images/g3.jpg">
+                </div>
+
+                <div class="mySlides">
+                  <div class="numbertext">4 / 7</div>
+                  <img src="images/g2.jpg">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">5/ 7</div>
+                    <img src="images/g1.jpg">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">6/ 7</div>
+                    <img src="images/g2.jpg">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">7/ 7</div>
+                    <img src="images/g3.jpg">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <div class="caption-container">
+                  <p id="caption"></p>
+                </div>
+
+              <div class="column">
+                  <img class="demo cursor" src="images/g1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="images/g2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Trolltunga, Norway">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="images/g3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="images/g2.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="images/g1.jpg" style="width:100%" onclick="currentSlide(5)" alt="Trolltunga, Norway">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="images/g2.jpg" style="width:100%" onclick="currentSlide(6)" alt="Mountains and fjords">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="images/g3.jpg" style="width:100%" onclick="currentSlide(7)" alt="Northern Lights">
+                </div>
+              </div>
+              </div>
+      </div>
+      <!--footer-->
+  </div>
+
+    </main>
+
+    <script>
+        function openModal() {
+          document.getElementById('myModal').style.display = "block";
+        }
+
+        function closeModal() {
+          document.getElementById('myModal').style.display = "none";
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          var captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+      </script>
+  </body>
+</html>

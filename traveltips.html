@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Blue Travels</title>
+    <meta name="viewport" content="width=device-width initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet"  href="css/main.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="js/collapse.js"></script>
+    <script type="text/javascript" src="js/showTip.js"></script>
+    <script type="text/javascript" src="js/changeBg.js"></script>
+  </head>
+
+  <body>
+    <main>
+      <nav class="navbar">
+        <div class="navbar-wrapper">
+          <a class="navbar-brand" href="index.html">
+              <img src="images/logo.png" />
+              Blue Travels
+          </a>
+
+          <div class="navbar-navcontainer">
+            <ul class="navbar-nav">
+                <li class="">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="travel.html">Travel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link selected" href="traveltips.html">Travel Tips</a>
+                </li>
+            </ul>
+            <form class="navbar-select">
+                <label class="text-white">Background Color</label>&nbsp;
+                <select id="backcolor-select" onchange="changeBgColor();">
+                    <option value="#fff">Default</option>
+                    <option value="#f7dbc8">Color 1</option>
+                    <option value="#d3e8c0">Color 2</option>
+                    <option value="#cbf2ef">Color 3</option>
+                    <option value="#eedcef">Color 4</option>
+                </select>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+          <div class="row no-margin-bottom"> <!-- login form section -->
+              <div class="col">
+                  <button class="btn-default no-bg" onclick="toggleBtn();">
+                      Toggle Login Form
+                  </button>
+                  <div id="login-form" class="collapse">
+                      <form class="form-inline">
+                          <div class="form-group">
+                              <input type="email" class="form-control" id="email" placeholder="E-mail address" required="required">
+                          </div>
+                          <div class="form-group">
+                              <input type="password" class="form-control" id="password" placeholder="Password" required="required">
+                          </div>
+                          <button type="submit" class="btn btn-primary">Login</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <h1 class="page-title">Travel Tips</h1>
+              <div class="col-2-of-3">
+                  <div class="row">
+                    <div>
+                        <div class="tip">
+                            <button class="btn-primary-1 primary" onclick="showTip('tip1');">
+                                Tip 1
+                            </button>
+                            <div class="tip-body">
+                                <div class="tip-body-hidden" id="tip1">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tip">
+                            <button class="btn-primary-1 success" onclick="showTip('tip2');">
+                                Tip 2
+                            </button>
+                            <div class="tip-body">
+                                <div class="tip-body-hidden" id="tip2">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tip">
+                            <button class="btn-primary-1 warning" onclick="showTip('tip3');">
+                                Tip 3
+                            </button>
+                            <div class="tip-body">
+                                <div class="tip-body-hidden" id="tip3">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-1-of-3">
+                  <aside>
+                      <h4>Traveling in promotion</h4>
+                      <p>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                  </aside>
+              </div>
+          </div>
+      </div>
+      <!--footer-->
+  </div>
+
+    </main>
+  </body>
+</html>
